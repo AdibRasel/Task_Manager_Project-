@@ -1,6 +1,6 @@
 //Basic Lib Import
 const express = require("express");
-// const Router = require("./Src/Routers/Api.js");
+const Router = require("./Src/Router/Api");
 const App = new express();
 const BodyParser = require("body-parser");
 
@@ -55,7 +55,7 @@ Mongose.connect(Url,(error)=>{
 
 
 // API Create, Or Routing Implement
-// App.use("/api/v1", Router)
+App.use("/api/v1", Router)
 
 
 // Undefine Route Or Undefine API 
@@ -72,3 +72,6 @@ App.use("*",(req, res)=>{
 
 
 module.exports = App;
+
+
+//class 5 User Registration
