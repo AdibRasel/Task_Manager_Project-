@@ -4,7 +4,7 @@ const DataSchema = Mongoose.Schema({
     description:{type:String},
     status:{type:String},
     email:{type:String},
-    createdDate:{type:String, default:Date.now()},
+    createdDate:{type:Date, default:Date.now()},
 }, {versionKey:false});
-const TaskModel = Mongose.model("Tasks",DataSchema);
+const TaskModel = Mongoose.model("Tasks",DataSchema);
 module.exports = TaskModel;
